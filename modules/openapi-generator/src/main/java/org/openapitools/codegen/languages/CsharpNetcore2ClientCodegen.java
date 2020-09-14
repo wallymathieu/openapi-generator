@@ -145,7 +145,7 @@ public class CsharpNetcore2ClientCodegen extends AbstractCSharpCodegen {
         supportsInheritance = true;
         modelTemplateFiles.put("model.mustache", ".cs");
         apiTemplateFiles.put("api.mustache", ".cs");
-        embeddedTemplateDir = templateDir = "csharp-netcore2";
+        embeddedTemplateDir = templateDir = "csharp-netcore2-client";
 
         cliOptions.clear();
 
@@ -589,7 +589,6 @@ public class CsharpNetcore2ClientCodegen extends AbstractCSharpCodegen {
         if (supportsAsync) {
             supportingFiles.add(new SupportingFile("IAsynchronousClient.mustache", clientPackageDir, "IAsynchronousClient.cs"));
         }
-        supportingFiles.add(new SupportingFile("ISynchronousClient.mustache", clientPackageDir, "ISynchronousClient.cs"));
         supportingFiles.add(new SupportingFile("RequestOptions.mustache", clientPackageDir, "RequestOptions.cs"));
         supportingFiles.add(new SupportingFile("Multimap.mustache", clientPackageDir, "Multimap.cs"));
         supportingFiles.add(new SupportingFile("RetryConfiguration.mustache", clientPackageDir, "RetryConfiguration.cs"));
